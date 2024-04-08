@@ -20,25 +20,25 @@ const Nav = () => {
             </div>
             <ul className={`nav-links ${menuOpen ? "visible" : ""}`}>
                 <li>
-                    <a href="/">Home</a>
+                    <a className="nav-link" href="/">Home</a>
                 </li>
                 <li>
-                    <a href="#about-us">About</a>
+                    <a className="nav-link" href="#about-us">About</a>
                 </li>
                 <li>
-                    <a href="#specials-sec">Specials</a>
+                    <a className="nav-link" href="#specials-sec">Specials</a>
                 </li>
                 <li>
-                    <a href="/">Menu</a>
+                    <a className="nav-link" href="/underConstruction">Menu</a>
                 </li>
                 <li>
-                    <a href="/booking">Reservations</a>
+                    <a className="nav-link" href="/booking">Reservations</a>
                 </li>
                 <li>
-                    <a href="/">Order Online</a>
+                    <a className="nav-link" href="/underConstruction">Order Online</a>
                 </li>
                 <li>
-                    <a href="/">Login</a>
+                    <a className="nav-link" href="/underConstruction">Login</a>
                 </li>
             </ul>
         </nav>

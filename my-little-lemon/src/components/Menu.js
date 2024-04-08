@@ -1,6 +1,7 @@
 import React from "react";
 import recipes from "../recipes";
 import Swal from "sweetalert2";
+import {Link} from "react-router-dom";
 
 const Menu = () => {
     const handleOrder = (id) => {
@@ -36,7 +37,9 @@ const Menu = () => {
         <div className="menu-container">
             <div id="specials-sec" className="menu-header">
                 <h2>This weeks specials!</h2>
-                <button className="action-btn">Online Menu</button>
+                <Link to="/underConstruction">
+                    <button className="action-btn">Online Menu</button>
+                </Link>
             </div>
             <div className="cards">
                 {recipes.map((recipe) => (
