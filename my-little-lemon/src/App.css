@@ -1,20 +1,23 @@
 
-body{
+body {
   width: 100%;
   margin: 0 auto;
 }
 
-li{
+li {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
 }
 
-nav{
+.navbar {
   z-index: 10001;
 }
 
+.navbar-logo {
+  width: 10rem;
+}
 
 .navbar {
   padding: 10px 13%;
@@ -23,18 +26,16 @@ nav{
   align-items: center;
 }
 
-nav ul li {
+.navbar ul li {
   display: inline-block;
   padding: 1em;
+  font-family: 'Markazi Text', serif;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
-nav ul li a{
-  color: #000;
-}
-
-nav ul li a:hover{
-  text-decoration: underline solid #495E57;
-  
+.navbar ul li a {
+  color: #333333;
 }
 
 .menu-icon {
@@ -63,17 +64,24 @@ nav ul li a:hover{
   width: 100%;
   background-color: #495E57;
   display: flex;
-  flex-direction: column;
   align-items: center;
   transition: all 0.3s ease-in-out;
 }
 
+.nav-links a:link {
+  text-decoration: none;
+}
+
+.nav-links a:hover, .nav-links a:active {
+  text-decoration: none;
+  color: #F4CE14;
+}
 
 /* header section */
 
 .header {
   background-color: #495e57;
-  padding: 40px 0;
+  padding: 40px 0 60px 0;
 }
 
 .header section {
@@ -84,22 +92,41 @@ position: relative;
 
 
 h2 {
+  font-family: 'Markazi Text', sans-serif;
+  font-weight: 500;
   color: #F4CE14;
-  font-size: 40px;
+  margin-bottom: 0;
+  font-size: 64px;
 }
 
 h3 {
-  font-size: 25px;
+  font-family: 'Markazi Text', sans-serif;
+  font-weight: 400;
+  margin-top: 0;
+  font-size: 40px;
+}
+
+p {
+  font-family: 'Karla', serif;
+  font-weight: 400;
+}
+
+.banner h2, .banner h3 {
+  line-height: 2.5rem;
 }
 
 .banner p {
-  font-size: 20px;
+  font-family: 'Karla', serif;
+  font-weight: 400;
+  font-size: 18px;
   max-width: 520px;
   line-height: 1.5;
   margin-bottom: 30px;
 }
 
 button {
+  font-family: 'Karla', serif;
+  font-weight: 700;
   background-color: #F4CE14;
   color: black;
   padding: 14px 18px;
@@ -107,11 +134,10 @@ button {
   text-decoration: none;
   border-radius: 12px;
   font-size: 20px;
-  font-weight: bold;
   cursor: pointer;
 }
 
-.banner-img{
+.banner-img {
   position: absolute;
   right: 13%;
   top: 15%;
@@ -125,60 +151,83 @@ button {
 }
 
 
-form, .comfirm{
+.background-img {
+  width: 100%;
+  max-height: 20rem;
+  object-fit: cover;
+}
+
+.booking-form {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+}
+
+.booking-section h2{
+  text-align: center;
+  color: #495e57;
+}
+
+form, .confirm {
   padding: 10px 13%;
 }
 
-.formField{
+.formField {
   padding: 50px 20px;
 }
 
-input, label{
+input, label {
   display: inline-block;
   margin-right: 20px;
   margin-bottom: 20px;
 }
-#book-date, #book-time, #book-guests, #book-occasion{
+#book-date, #book-time, #book-guests, #book-occasion {
   background: #bdbdbd43;
   padding: 8px 24px;
   border: none;
   outline: none;
   border-radius: 2px;
 }
+.btnReceive {
+  display: block;
+  text-align: center;
+}
 
-.btnReceive input{
+.btnReceive input {
   padding: 12px 16px;
   margin-top: 20px;
   background: #495e57;
   color: #fff;
   border: none;
   border-radius: 4px;
-
 }
 
-.comfirm span{
+.confirm span {
   color: blue;
 }
 
 
 /* menu items */
 
-.menu-container{
+.menu-container {
   margin: 110px auto;
   padding: 10px 13%;
 }
 
-.menu-container h2{
-  color: #000;
+.menu-container h2 {
+  font-family: 'Karla', serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #333333;
 }
 
-.menu-header{
+.menu-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-.cards{
+.cards {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
@@ -187,37 +236,172 @@ input, label{
   gap: 2rem 1rem;
 }
 
-.menu-items{
-  /* height: 400px; */
-  width: 350px;
-  background: #a9c8be;
-  border-radius: 8px;
+.cards h5 {
+  font-family: 'Karla', serif;
+  font-weight: 700;
+  font-size: 16px;
 }
 
-.menu-container img{
+.item-price {
+  font-family: 'Karla', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #EE9972;
+}
+
+.cards p {
+  font-family: 'Karla', serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.menu-items {
+  min-height: 29rem;
+  width: 350px;
+  background: #EDEFEE;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-container img {
   width: 100%;
   height: 233px;
   border-radius: 8px;
 }
 
-.menu-content{
+.menu-content {
   padding: 5px 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 
-.menu-content .heading{
+.menu-content .heading {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.orderbtn{
+.orderbtn {
   padding: 5px 12px;
+  margin-top: auto;
   margin-bottom: 20px;
+  align-self: center;
   font-size: 16px;
   font-weight: 600;
 }
 
-footer section{
+.about-container {
+  padding: 10px 13%;
+  display: flex;
+  margin-bottom: 7rem;
+}
+
+.about-description, .about-images {
+  flex: 1;
+}
+
+.about-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.about-description h2, .about-description h3{
+  margin: 0;
+  color: #495e57;
+  line-height: 2.5rem;
+}
+
+.about-description p {
+  color: #333333;
+}
+
+.description-container {
+  max-width: 20rem;
+  text-align: left;
+}
+
+.about-container img {
+  width: 100%;
+  border-radius: 2em;
+}
+
+.overlapping-images {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: 5px;
+}
+
+.img-right {
+  grid-column: 5/span 6;
+  grid-row: 1/span 2;
+}
+
+.img-left {
+  grid-column: 1/span 6;
+  grid-row: 2/span 2;
+}
+
+.review {
+  margin-bottom: 4rem;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+  color: #F4CE14;
+  font-size: 1rem;
+}
+
+.person-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviewerImg {
+  clip-path: circle();
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.review-text p{
+  margin-top: 0;
+  font-family: 'Karla', serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.flex-item {
+  flex: 1;
+}
+
+.person-text {
+  color: #333333;
+  font-family: 'Karla', serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+}
+
+.testimonials-container{
+  padding: 10px 13%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.footer-section{
   padding: 10px 13%;
   display: flex;
   justify-content: space-between;
@@ -227,7 +411,7 @@ footer section{
 .company-info img{
   margin-top: 12px;
   cursor: pointer;
-  width: 200px;
+  max-width: 6.5rem;
 }
 
 .company-info p{
@@ -236,21 +420,54 @@ footer section{
 
 .footer {
   background-color: #495e57;
-  padding: 40px 0;
+  padding: 20px 0;
+  color: #EDEFEE;
 }
 
-footer h3{
+address {
+  font-style: normal;
+}
+
+.footer li {
+  font-family: 'Karla', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+.footer h3{
+  font-family: 'Karla', serif;
+  font-weight: 700;
   font-size: 18px;
+  color: #F4CE14;
 }
 
-footer ul{
+.footer ul{
   padding: 0;
 }
 
-footer ul li{
-  padding: 8px 0;
+.contacts li {
+  display: flex;
+  gap: 1rem;
 }
 
+.social-links ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer a:link, .footer a:visited {
+  color: #EDEFEE;
+}
+
+.footer a:active, .footer a:hover {
+  font-size: x-large;
+}
+
+.action-btn:hover, .action-btn:active {
+  background-color: #495e57;
+  color: #EDEFEE;
+}
 
 @media screen and (max-width: 768px){
   .menu-icon {

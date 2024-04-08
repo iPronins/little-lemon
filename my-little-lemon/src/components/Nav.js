@@ -11,7 +11,7 @@ const Nav = () => {
     return (
         <nav className={`navbar ${menuOpen ? "open" : ""}`}>
             <a href="/" className="logo">
-                <img src={logo} alt="" />
+                <img className="navbar-logo" src={logo} alt="" />
             </a>
             <div className="menu-icon" onClick={toggleMenu}>
                 <div className="bar"></div>
@@ -23,19 +23,19 @@ const Nav = () => {
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/">About</a>
+                    <a href="#about-us">About</a>
                 </li>
                 <li>
-                    <a href="/">Services</a>
+                    <a href="#specials-sec">Specials</a>
                 </li>
                 <li>
                     <a href="/">Menu</a>
                 </li>
                 <li>
-                    <a href="/">Reservations</a>
+                    <a href="/booking">Reservations</a>
                 </li>
                 <li>
-                    <a href="/booking">Order Online</a>
+                    <a href="/">Order Online</a>
                 </li>
                 <li>
                     <a href="/">Login</a>

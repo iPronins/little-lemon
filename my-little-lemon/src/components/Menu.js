@@ -24,7 +24,7 @@ const Menu = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 swalWithBootstrapButtons.fire(
-                    'Orderd!',
+                    'Ordered!',
                     'Your order has been confirmed.',
                     'success'
                 )
@@ -34,9 +34,9 @@ const Menu = () => {
     }
     return (
         <div className="menu-container">
-            <div className="menu-header">
+            <div id="specials-sec" className="menu-header">
                 <h2>This weeks specials!</h2>
-                <button>Online Menu</button>
+                <button className="action-btn">Online Menu</button>
             </div>
             <div className="cards">
                 {recipes.map((recipe) => (
@@ -45,10 +45,10 @@ const Menu = () => {
                         <div className="menu-content">
                             <div className="heading">
                                 <h5>{recipe.title}</h5>
-                                <p>${recipe.price}</p>
+                                <p className="item-price">${recipe.price}</p>
                             </div>
                             <p>{recipe.description}</p>
-                            <button className="orderbtn" onClick={() => handleOrder(recipe.id)}>Order Now</button>
+                            <button className="orderbtn action-btn" onClick={() => handleOrder(recipe.id)}>Order Now</button>
                         </div>
                     </div>
                 ))}
